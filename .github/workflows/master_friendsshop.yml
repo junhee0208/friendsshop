@@ -56,5 +56,5 @@
           with:
             app-name: 'friendsshop'
             slot-name: 'production'
-            publish-profile: ${{ secrets.AzureAppService_PublishProfile_5156dddb690841808b7c67048a61b88f }}
+            publish-profile: ${{ secrets.AzureAppService_PublishProfile_033dffc3b3494b4b87a30be704c41b24 }}
             package: .
