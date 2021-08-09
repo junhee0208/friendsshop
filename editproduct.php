@@ -1,5 +1,5 @@
 <?php include 'inc/header.php'; ?>
-<?php include_once '../config/init.php'?>
+<?php //include_once 'config/init.php'?>
 <style>
     #upper-banner{
         width:80%;

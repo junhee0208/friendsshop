@@ -167,7 +167,7 @@ function LoginUser($conn, $userId, $pwd)
 
 function CreateProduct($conn, $title, $price, $description, $image)
 {
-	$sql = "INSERT INTO tbproduct (productName, productPrice, productDesc, productImg) VALUES(?, ?, ?, ?)";
+	$sql = "INSERT INTO tbProduct (productName, productPrice, productDesc, productImg) VALUES(?, ?, ?, ?)";
 	$stmt = mysqli_stmt_init($conn);
 
 	try{
@@ -191,7 +191,7 @@ function CreateProduct($conn, $title, $price, $description, $image)
 
 function GetProduct($conn, $prod_id)
 {
-	$sql = "SELECT * FROM tbproduct WHERE productNo = ?";
+	$sql = "SELECT * FROM tbProduct WHERE productNo = ?";
 	$stmt = mysqli_stmt_init($conn);
 
 	try{
@@ -227,7 +227,7 @@ function GetProduct($conn, $prod_id)
 
 function UpdateProduct($conn, $prod_id, $title, $price, $description, $image)
 {
-	$sql = "UPDATE tbproduct 
+	$sql = "UPDATE tbProduct 
 			SET productName = ?, 
 				productPrice = ?, 
 				productDesc = ?, 
@@ -259,7 +259,7 @@ function DeleteProduct($conn, $prod_id)
 {
 	header("location: ../deleteproduct.php?pid=$prod_id");
 	
-	$sql = "DELETE FROM tbproduct WHERE productNo =?";
+	$sql = "DELETE FROM tbProduct WHERE productNo =?";
 	$stmt = mysqli_stmt_init($conn);
 
 	try{
